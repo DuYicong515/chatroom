@@ -12,6 +12,12 @@ var db = mysql.createConnection({
     database: 'msg_info',
 });
 
+/*
+* handle the post request from frontend
+* make a query in database
+* if the login information is not correct
+* send error status
+* */
 
 router.post('/index', function (req,res,next){
   var username=req.body.username;
@@ -28,20 +34,14 @@ router.post('/index', function (req,res,next){
 
 })
 
-router.post('/index', function (req,res,next){
-    var username=req.body.username;
-    var password=req.body.password;
-    db.query("SELECT * FROM msg_info.user_info WHERE password= '"+password+"' AND username='"+username+"'",function(err,rows){
-        if(err) throw err;
-        if (rows.length>=0) {res.send('1');}
-        else
-        {
-            res.send(404);
-        }
+/*
+* when client wants to register, front end send a post request here
+* make a query first to check if the username could be used
+* if it could be used, insert the new record into database
+* if not send error status
+*
+* */
 
-    });
-
-})
 router.post('/index_register', function (req,res,next){
     var username=req.body.username;
     var password=req.body.password;
@@ -62,12 +62,13 @@ router.post('/index_register', function (req,res,next){
     });
 
 })
-
+/*socket io part dealing with chatroom*/
 
 socketio.getSocketio = function(server){
     var io = socket_io.listen(server);
     io.on('connection', function(socket){
-
+        //load history message by making query in database
+        //emit a show message request, make front end append message to panal
         socket.on('get history messages',function () {
             db.query('SELECT * FROM msg_info.messages_info', function (err, rows) {
                 if (err) throw err;
@@ -81,7 +82,9 @@ socketio.getSocketio = function(server){
             })
         })
 
-
+        // event handler when a user wants to submit message
+        // insert into database
+        // show in this user's panal and also broadcast to all users
         socket.on('send message',function(msg,usr_name,time) {
             var insert_info={username:usr_name,msg:msg,msgtime:time};
 
