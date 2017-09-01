@@ -111,6 +111,12 @@ router.get('/', function(req, res, next) {
 });
 
 
+/*
+* make two exports value
+* socketio for www file to start socket
+* router for app.js
+* */
+
 
 var data={"socketio":socketio,"router":router}
 module.exports = data;
