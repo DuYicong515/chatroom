@@ -5,6 +5,8 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+
+//change the return file of index.js
 var index = require('./routes/index').router;
 var users = require('./routes/users');
 
