@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang = "en">
+<head>
+  <meta charset = "UTF-8">
+  <title>Welcome to FSE Charoom</title>
+  <link rel = "stylesheet" href = "/stylesheets/style.css">
+</head>
+
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+<script src="/javascripts/client.js"></script>
+
+
+<body>
+<div class="LoginPage">
+  <div class="form">
+    <h1 class="h1">Welcome to 18652 chatroom!</h1>
+    <h2 class="h2">Please log in or register</h2>
+    <div>
+      <input class="EnterUsrName"  placeholder="user name">
+    </div>
+
+    <div>
+      <input class="EnterUsrName" type="password" id="EnterPsw" placeholder="password">
+    </div>
+
+    <div>
+      <button class="Log_in" id="log_in">Log in</button>
+      <button class="Log_in" id="register">Register</button>
+    </div>
+  </div>
+</div>
+
+
+<!--hide the MainPage for chatroom at first
+make routing easier by only one page here-->
+
+<div class="MainPage" style="display:none;">
+  <div class="headArea">
+    <button class="button" id="leave">Leave</button>
+    <h1 class="h1">Welcome to FSE chatroom!</h1>
+  </div>
+  <div class="msgArea">
+    <ul class="ShowMsg"></ul>
+  </div>
+  <div class="inputArea">
+    <input class = "inputMessage">
+    <button class = "submitMessage">Send</button>
+  </div>
+
+
+</div>
+
+</body>
+
+</html>

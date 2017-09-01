@@ -1,0 +1,154 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+}
+body { font: 13px Helvetica, Arial; }
+
+.LoginPage {
+  height:100%;
+  width:100%;
+  text-align: center;
+}
+
+.LoginPage .form{
+  width: 700px;
+  height: 200px;
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.LoginPage .h1{
+  font-size:250%;
+  font-weight: 500;
+  color:cadetblue;
+}
+
+.LoginPage .h2{
+  font-size:120%;
+  font-weight: 400;
+  color:cadetblue;
+  margin-top:20px;
+}
+.EnterUsrName{
+  margin-top: 30px;
+  background-color: transparent;
+  padding-top:15px;
+  padding-bottom: 15px;
+  text-align: center;
+  width: 75%;
+  font-size: 120%;
+}
+
+.Log_in{
+  margin-top: 30px;
+  margin-left: 5px;
+  padding-top:18px;
+  padding-bottom: 15px;
+  background-color: cadetblue;
+  width: 15%;
+  color:white;
+  font-size: 150%;
+}
+
+
+.MainPage{
+  height:100%;
+  width:100%;
+}
+.MainPage .h1{
+  text-align: center;
+  font-size:250%;
+  font-weight: 500;
+  color:cadetblue;
+}
+
+.MainPage .ShowMsg{
+  list-style-type: none;
+  margin:30px;
+  padding: 0;
+  height:75%;
+  overflow-y: scroll;
+  margin-bottom: 200px;
+
+}
+
+.MainPage .ShowMsg li{
+  padding-top:5px;
+  padding-left: 10px;
+  background-color: white;
+  color:cadetblue;
+}
+
+.MainPage .ShowMsg li:nth-child(odd){
+  background-color: cadetblue;
+  color:white;
+}
+
+.msgArea{
+  padding: 3px;
+  position: fixed;
+  width: 100%;
+  height:95%;
+  margin-top: 70px;
+}
+
+.headArea{
+  padding: 3px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height:10%;
+}
+.headArea .button{
+  background: cadetblue;
+  color:white;
+  font-size: 180%;
+  margin-top: 5px;
+  margin-left: 10px;
+}
+.inputArea{
+  padding: 3px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+
+}
+.inputArea .inputMessage {
+  padding: 10px;
+  width: 82%;
+  margin-right:5px;
+  font-size: 120%;
+  margin: 5px;
+
+}
+
+.inputArea .submitMessage{
+  width: 11%;
+  background: cadetblue;
+  padding: 10px;
+  font-size: 120%;
+  color:white;
+  margin: 5px;
+}
+
+
+
+.MsgContent{
+  font-size:200%;
+  font-weight: 300;
+}
+.MsgUsr{
+  float:left;
+  font-size: 120%;
+  font-weight: 200;
+}
+.MsgTime{
+  float:right;
+  font-size: 100%;
+}
