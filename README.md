@@ -1,7 +1,7 @@
 # chatroom
 18652 pre-registration assignment
 
-1. start it by node bin/www
+1. start it by node ./bin/www
 or npm start
 
 2. mySQL has to be installed locally
