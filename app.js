@@ -16,6 +16,8 @@ var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 //app.set('view engine', 'ejs');
+
+//make the view part using html not ejs/jade
 app.engine('.html',require('ejs').__express);
 app.set('view engine','html');
 
