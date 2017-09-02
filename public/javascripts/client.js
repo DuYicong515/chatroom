@@ -20,6 +20,7 @@ $(function () {
                 if (status=='success') {
                     $('.LoginPage').hide();
                     $('.MainPage').show();
+                    //socket.connect();
                     socket.emit("get history messages",function () {});
                 }
             },
@@ -48,6 +49,7 @@ $(function () {
                     alert("Register successfully! Please remember your password to log in next time.");
                     $('.LoginPage').hide();
                     $('.MainPage').show();
+                    //socket.connect();
                     socket.emit("get history messages",function () {});
                 }
             },
@@ -68,6 +70,8 @@ $(function () {
         $('.LoginPage').show();
         $(".EnterUsrName").val('');
         $("#enterpsw").val('');
+        $(".ShowMsg").empty();
+        //socket.disconnect();
 
     })
     /*
